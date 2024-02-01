@@ -1,5 +1,4 @@
 @import "./vars.css";
-
 .Login
 {
   background-color: var(--color-login-button) !important;
@@ -18,12 +17,12 @@
 }
 .Login:hover
 {
-  background-color: white !important;
-  color:black !important;
+  background-color: var(--color-login-button);
+  color:var(--color-text-button)
 }
 .nav
 {
-  background-color: var(--color-bg);
+  background: var(--color-bg-navbar) !important;
 }
 .web-name
 {
@@ -51,7 +50,7 @@
 }
 .Footer
 {
-  background-color: var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-robot);
 }

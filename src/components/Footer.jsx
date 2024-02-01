@@ -3,9 +3,9 @@ import React from "react";
 export const Footer = () => {
   return (
     <>
-      <div className="container mb-0 pb-0 Footer">
+      <div className="mb-0 pb-0 Footer">
         <footer className="ps-4">
-          <div className="d-flex flex-column flex-sm-row justify-content-between border-top absolute-bottom">
+          <div className="d-flex flex-column flex-sm-row justify-content-between border-top absolute-bottom ps-4 pt-2">
             <p>© 2024 Comment Analyzer, Inc. All rights reserved.</p>
             {/* <ul className="list-unstyled d-flex">
               <li className="ms-3">

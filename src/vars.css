@@ -3,11 +3,12 @@
   --color-text:black;
   --color-bg:radial-gradient(circle, rgba(227,227,227,1) 0%, rgba(255,251,251,1) 100%);
 
+  --color-bg-navbar:white;
   --color-login-button:white;
   --color-signup-button:rgb(241, 172, 34);
+  --color-text-button:black;
   --color-mode:black;
   --color-mode-background:transparent;
-  --color-text-button:black;
   --color-border-radius:black;
   --color-search-hover:blue;
   --color-search-button:black;
@@ -20,9 +21,10 @@
 
 [data-theme-body="dark"]{
   --color-text:#fff;
+  --color-bg-navbar:radial-gradient(circle, rgba(11,36,71,1) 51%, rgba(0,0,0,1) 100%);
   --color-text-button:white;
   --color-border-radius:white;
-  --color-bg :rgb(26, 26, 26);
+  --color-bg : radial-gradient(circle, rgba(11,36,71,1) 51%, rgba(0,0,0,1) 100%);
   --color-login-button:rgb(10, 10, 10);
   --color-signup-button:rgb(255, 184, 43);
   --color-mode:white;

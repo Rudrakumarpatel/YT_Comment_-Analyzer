@@ -30,7 +30,7 @@ export const Navbar = () => {
  }
   return (
     <>
-      <header className="p-3 text-bg-white border border-dark nav">
+      <header className="p-3 text-bg-white nav">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-between">
             <div className="name d-flex">
