@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
-
 export const Navbar = () => {
 
- const [mode,setMode] =  useState("dark");
+ const [mode,setMode] =  useState("light");
 
 
  const setDarkMode = () =>{
@@ -43,12 +42,10 @@ export const Navbar = () => {
             </div>
             
             <div className="text-end button d-flex">
-              <button type="button" className="btn btn-outline-dark me-2 Login">
-                Login
-              </button>
-              <button type="button" className="signup">
-                Sign-up
-              </button>
+               <a href="/Login" className="btn btn-outline-dark me-2 Login">Login</a>
+               
+                <a href="/" className="btn signup">Sign up</a>
+
               {/* <button data-gfg-action="toggleGFGTheme" aria-label="Toggle GFG Theme" style={{"cursor": "pointer", "padding": "8px", "border": "1px solid rgb(204, 204, 204)", "borderRadius": "4px", "background": "transparent", "margin-right": "5px"}} className="mode"></button> */}
               <p className="mode" onClick={toggleDarkMode}>{mode === "dark" ?<MdLightMode/> : <MdDarkMode/>}</p>
             </div>

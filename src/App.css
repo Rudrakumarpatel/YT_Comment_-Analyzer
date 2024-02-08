@@ -1,24 +1,28 @@
 @import "./vars.css";
+*
+{
+  box-sizing: border-box;
+}
 .Login
 {
   background-color: var(--color-login-button) !important;
-  color: var( --color-text-button)!important;
+  
   border:1px solid var(--color-border-radius)!important;
+  text-decoration: none;
+  color: var(--color-text-button)!important;
 }
 .signup
 {
+  text-decoration: none;
   background-color: var(--color-signup-button)!important;
   border-radius: 7px;
   border:1px solid white;
+  font-weight: bold;
 }
+
 .signup:hover
 {
   background-color:rgb(255, 203, 60) !important;
-}
-.Login:hover
-{
-  background-color: var(--color-login-button);
-  color:var(--color-text-button)
 }
 .nav
 {
@@ -34,11 +38,17 @@
   display: flex;
   justify-content: center;
 }
-.searchbar
+.button-response
 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var( --color-search-button-bg);
+  color:var(--color-button-search-text-color);
+  font-weight: 500;
+}
+.text_input
+{
+  background-color: var(--color-search);
+  color:var(--color-search-text);
+  font-weight: 600;
 }
 .Bodyarea
 {
@@ -56,7 +66,6 @@
 }
 .hover-effect:hover
 {
-  border:2px solid blue;
   box-shadow: 2px 3px 3px var(--color-search-hover);
 }
 .mode

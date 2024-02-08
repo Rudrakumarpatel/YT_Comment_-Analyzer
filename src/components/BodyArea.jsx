@@ -1,13 +1,13 @@
 import React from "react";
 import { Searchbar } from "./Searchbar";
+import { Footer } from "./Footer";
 
 export const BodyArea = () => {
   return (
-    <div className="Bodyarea">
+    <><div className="Bodyarea">
       <div className="searchbar">
-      <Searchbar></Searchbar>
+        <Searchbar></Searchbar>
       </div>
-      
-    </div>
+    </div><Footer></Footer></>
   );
 };
