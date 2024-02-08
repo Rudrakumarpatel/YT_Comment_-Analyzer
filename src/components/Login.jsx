@@ -27,10 +27,10 @@ export const Login = ()=>{
             <label className="form-label" htmlFor="form1Example23">Password</label>
           </div>
 
-          <div className="d-flex justify-content-around align-items-center mb-4">
+          <div className="d-flex justify-content-between align-items-center mb-4">
             {/* Checkbox - input */}
             <div className="form-check">
-              <input className="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+              <input className="form-check-input" type="checkbox" value="" id="form1Example3"/>
               <label className="form-check-label" htmlFor="form1Example3"> Remember me </label>
             </div>
             <a href="#!">Forgot password?</a>

@@ -9,7 +9,6 @@
 .section
 {
   box-sizing: border-box;
-  overflow: hidden;
   height: 100%;
   background-color: var(--color-bg);
   color:var(--color-text);
