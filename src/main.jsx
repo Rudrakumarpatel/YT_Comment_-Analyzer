@@ -7,6 +7,7 @@ import { Navbar } from './components/Navbar.jsx';
 import { Searchbar } from './components/Searchbar.jsx';
 import { BodyArea } from './components/bodyArea.jsx';
 import { Login } from './components/Login.jsx';
+import Signup from './components/Signup.jsx';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {path: "/", element:<BodyArea/>},
-      {path:"/Login",element:<Login/>}
+      {path:"/Login",element:<Login/>},
+      {path:"/Signup",element:<Signup/>},
     ],
   },
 ])

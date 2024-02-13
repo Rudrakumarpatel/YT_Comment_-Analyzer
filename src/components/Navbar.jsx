@@ -44,7 +44,7 @@ export const Navbar = () => {
             <div className="text-end button d-flex">
                <a href="/Login" className="btn btn-outline-dark me-2 Login">Login</a>
                
-                <a href="/" className="btn signup">Sign up</a>
+                <a href="/Signup" className="btn signup">Sign up</a>
 
               {/* <button data-gfg-action="toggleGFGTheme" aria-label="Toggle GFG Theme" style={{"cursor": "pointer", "padding": "8px", "border": "1px solid rgb(204, 204, 204)", "borderRadius": "4px", "background": "transparent", "margin-right": "5px"}} className="mode"></button> */}
               <p className="mode" onClick={toggleDarkMode}>{mode === "dark" ?<MdLightMode/> : <MdDarkMode/>}</p>
