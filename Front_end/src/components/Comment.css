@@ -1,0 +1,16 @@
+@import "../vars.css";
+.comm
+{
+  display: flex;
+  color: var(--color-text);
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.commentdata
+{
+  width: 95%;
+}
+.sentiment
+{
+  width: 5%;
+}

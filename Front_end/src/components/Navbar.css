@@ -1,0 +1,69 @@
+@import "../vars.css";
+.Login {
+  background-color: var(--color-login-button) !important;
+
+  border: 1px solid var(--color-border-radius) !important;
+  text-decoration: none;
+  color: var(--color-text-button) !important;
+}
+
+.signup {
+  text-decoration: none;
+  background-color: var(--color-signup-button) !important;
+  border-radius: 7px;
+  border: 1px solid white;
+  font-weight: bold;
+}
+
+.signup:hover {
+  background-color: rgb(255, 203, 60) !important;
+}
+
+.nav {
+  background: var(--color-bg-navbar) !important;
+}
+
+.web-name {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchbar {
+  position: relative;
+}
+
+
+.mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+  margin-bottom: 0px !important;
+  width: 30px;
+  text-align: center;
+  font-size: x-large;
+  background-color: rgb(211, 211, 211);
+  border-radius: 50%;
+  border: 1px solid rgb(204, 204, 204);
+  background: var(--color-mode-background);
+  cursor: pointer;
+  color: var(--color-mode);
+}
+
+
+#logo {
+  width: 6.0rem;
+  height: 4rem;
+  border-radius: 40%;
+  margin-right: 1rem;
+}
+
+@media(max-width:550px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,37 @@
+:root
+{
+  --color-text:black;
+  --color-bg:radial-gradient(circle, rgba(227,227,227,1) 0%, rgba(255,251,251,1) 100%);
+
+  --color-bg-navbar:white;
+  --color-login-button:white;
+  --color-signup-button:rgb(241, 172, 34);
+  --color-text-button:black;
+  --color-mode:black;
+
+  --color-mode-background:transparent;
+  --color-border-radius:black;
+  --color-search-button:black;
+  --color-search:#ffffff;
+  --color-search-text:black;
+  --color-primary:#576cbc;
+  --color-secondary:#19376d;
+  --color-dark:#0b2447;
+  --font-robot:"Roboto";
+}
+
+[data-theme-body="dark"]{
+  --color-button-search-text-color:#f6f7f9;
+  --color-search-button-bg:#087ea4;
+  --color-search-text:white;
+  --color-search:#343a46;
+  --color-text:#fff;
+  --color-bg-navbar:#23272f;
+  --color-text-button:rgb(255, 255, 255);
+  --color-border-radius:white;
+  --color-bg : #23272f;
+  --color-login-button:rgb(10, 10, 10);
+  --color-signup-button:rgb(255, 184, 43);
+  --color-mode:white;
+  --color-search-hover:#0867d2;
+}

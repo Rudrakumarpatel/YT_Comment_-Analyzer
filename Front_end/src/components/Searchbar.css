@@ -1,0 +1,17 @@
+.comments
+{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-self:center;
+}
+.Searchbar
+{
+  display: flex;
+  justify-content: center;
+  align-self:center;
+}
+.select
+{
+  margin-left: 2%;
+}
