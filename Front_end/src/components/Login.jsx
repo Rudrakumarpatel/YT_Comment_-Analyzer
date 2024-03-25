@@ -5,16 +5,17 @@ import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-// import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export const Login = () => {
+
   let form_inital = {
     email: "",
     password: "",
   };
   const [form, setform] = useState(form_inital);
   const [warning, setwarning] = useState(false);
-  // const { user, loginWithRedirect } = useAuth0();
+  const { user, loginWithRedirect } = useAuth0();
   const history = useNavigate();
   const Email_ref = useRef();
   const password_ref = useRef();
@@ -25,6 +26,14 @@ export const Login = () => {
       [e.target.name]: e.target.value,
     });
   };
+  const handleGoogleauth = async (e)=>
+{
+    await loginWithRedirect();
+    console.log(user);
+      console.log("hello world")
+      localStorage.setItem("token", user?.email);
+      history("/");
+  }
   
   const handleonSubmit = async (e) => {
     e.preventDefault();
@@ -139,7 +148,7 @@ export const Login = () => {
                     style={{ background: "white", border: "1.5px solid black" }}
                     href="#!"
                     role="button"
-                    // onClick={async () => loginWithRedirect()}
+                    onClick={handleGoogleauth}
                   >
                     <i className="fab fa-twitter me-2">
                       <FcGoogle />

@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import "../App.css";
-import axios from "axios";
 import { Comments } from "./Comments";
 
 import { LoadingSpinner } from "./LodingSpinner";
 import "./Searchbar.css";
+import {SentimentChart} from "./SentimentChart";
 
 // className="search_bar d-flex justify-content-center"
 export const Searchbar = () => {
@@ -12,15 +12,33 @@ export const Searchbar = () => {
   const [fetching, setFetching] = useState(false);
   const [Comment, setComment] = useState(false);
   const [comments, setComments] = useState([]);
-  const [selectedOption, setSelectedOption] = useState("all");
   const [option, setOption] = useState("All");
+
+  let positiveCount = 0;
+  let negativeCount = 0;
+  let neutralCount = 0;
+
+  comments.forEach((comment) => {
+    switch (comment.sentiment) {
+      case 1:
+        positiveCount++;
+        break;
+      case -1:
+        negativeCount++;
+        break;
+      case 0:
+        neutralCount++;
+        break;
+      default:
+        break;
+    }
+  });
 
   const handleUrlChange = (e) => {
     setUrl(e.target.value);
   };
 
   const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
     setOption(event.target.value);
   };
   const handleSubmit = async (e) => {
@@ -90,16 +108,26 @@ export const Searchbar = () => {
         />
         <select
           id="options"
-          value={selectedOption}
+          value={option}
           onChange={handleOptionChange}
           className="select"
         >
-          <option value="All" className="option">All</option>
-          <option value="Positive" className="option">Positive</option>
-          <option value="Negative" className="option">Negative</option>
-          <option value="Nutural" className="option">Neutral</option>
+          <option value="All" className="option">
+            All
+          </option>
+          <option value="Positive" className="option">
+            Positive
+          </option>
+          <option value="Negative" className="option">
+            Negative
+          </option>
+          <option value="Nutural" className="option">
+            Neutral
+          </option>
         </select>
+
       </div>
+        <SentimentChart positive={positiveCount} negative={negativeCount} neutral={neutralCount} data={Comment}></SentimentChart>
       {!fetching && !Comment ? (
         ""
       ) : fetching ? (
@@ -111,13 +139,13 @@ export const Searchbar = () => {
           <div
             style={{
               width: "87%",
-              height:"20rem",
+              height: "20rem",
               overflow: "auto",
-              marginLeft:"10px"
+              marginLeft: "10px",
             }}
           >
-            <Comments data={comments} options = {option}></Comments>
-          </div>
+            <Comments data={comments} options={option}></Comments>
+          </div>   
         </div>
       ) : (
         // Default condition: Display "Loading comments..." if none of the above conditions are met

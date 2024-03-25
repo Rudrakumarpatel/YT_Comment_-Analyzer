@@ -3,10 +3,12 @@ import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./Navbar.css"
+import { useAuth0 } from "@auth0/auth0-react";
 export const Navbar = () => {
 
 const [mode,setMode] =  useState("light");
 const [login,setlogin] = useState("LoggedIn");
+const { user, loginWithRedirect,isAuthenticated} = useAuth0();
 
 useEffect(()=>
 {
@@ -14,7 +16,7 @@ useEffect(()=>
   {
     setlogin("LoggedOut");
   }
-},[])
+},[user]);
 
  const setDarkMode = () =>{
     document.querySelector("body")?.setAttribute("data-theme-body","dark");

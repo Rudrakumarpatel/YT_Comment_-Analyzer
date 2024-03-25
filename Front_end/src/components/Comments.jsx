@@ -8,6 +8,7 @@ export const Comments = ({ data, options }) => {
         {options === "All" ? (
           <div className="comm">
             <span key={index} className="commentdata" style={comment.sentiment === 1 ? {color:"green"}: comment.sentiment === -1 ? {color:"red"}:{color:"var(--color-text)"}}>
+              {/* {comment.sentiment === 1 ? } */}
               {comment.comment}
             </span>
           </div>

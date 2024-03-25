@@ -27,6 +27,7 @@ router.post('/addcomments', fetchuser, async (req, res) => {
     let response;
     try {
       response = await axios.post("http://127.0.0.1:5000/get_comments", req.body);
+      console.log(response.data);
     }
     catch (error) {
       console.log(error);

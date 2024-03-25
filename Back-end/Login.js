@@ -5,11 +5,14 @@ const mongoose = require('mongoose');
 const app = express();
 const auth = require('./routers/auth.js');
 const comments = require('./routers/comments.js');
+const dotenv = require('dotenv');
 const port = 3001;
+
+dotenv.config();
 
 main().catch(err => console.log(err));
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1/demo');
+  await mongoose.connect('mongodb://127.0.0.1/CommentSense');
   console.log('Connected to MongoDB');
 }
 

@@ -17,7 +17,7 @@ youtube = googleapiclient.discovery.build(
     api_service_name, api_version, developerKey=Developer_key
 )
 
-def get_youtube_comments(video_id, max_results=100):
+def get_youtube_comments(video_id, max_results=2000):
     request = youtube.commentThreads().list(
         part='snippet',
         videoId=video_id,
