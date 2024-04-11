@@ -11,7 +11,7 @@ svm_model = joblib.load("svm_model.joblib")
 # Set up the YouTube API
 api_service_name = "youtube"
 api_version = 'v3'
-Developer_key = "AIzaSyB-T2usepldYErqPCF6LgMcSolJMmLF4NY"
+Developer_key = ""
 
 youtube = googleapiclient.discovery.build(
     api_service_name, api_version, developerKey=Developer_key
